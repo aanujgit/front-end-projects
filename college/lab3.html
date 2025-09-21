@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Solar System Map</title>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Solar System Explorer</h1>
+            <p class="subtitle">Click on the hotspots to learn about our solar system</p>
+        </header>
+        
+        <div class="content">
+            <div class="image-map-container">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Solar System" usemap="#solarSystemMap">
+                    
+                    <div class="hotspot" style="top: 30%; left: 20%;" data-planet="sun"></div>
+                    <div class="hotspot" style="top: 50%; left: 30%;" data-planet="mercury"></div>
+                    <div class="hotspot" style="top: 45%; left: 40%;" data-planet="venus"></div>
+                    <div class="hotspot" style="top: 60%; left: 50%;" data-planet="earth"></div>
+                    <div class="hotspot" style="top: 40%; left: 60%;" data-planet="mars"></div>
+                    <div class="hotspot" style="top: 70%; left: 70%;" data-planet="jupiter"></div>
+                    <div class="hotspot" style="top: 30%; left: 80%;" data-planet="saturn"></div>
+                    
+                    <map name="solarSystemMap">
+                        <area shape="circle" coords="160,150,20" alt="Sun" data-planet="sun">
+                        <area shape="circle" coords="240,225,10" alt="Mercury" data-planet="mercury">
+                        <area shape="circle" coords="320,180,12" alt="Venus" data-planet="venus">
+                        <area shape="circle" coords="400,270,13" alt="Earth" data-planet="earth">
+                        <area shape="circle" coords="480,160,11" alt="Mars" data-planet="mars">
+                        <area shape="circle" coords="560,350,25" alt="Jupiter" data-planet="jupiter">
+                        <area shape="circle" coords="640,120,22" alt="Saturn" data-planet="saturn">
+                    </map>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <div class="info-header">
+                    <div class="planet-icon">☀️</div>
+                    <h2 class="info-title">Solar System</h2>
+                </div>
+                
+                <div class="info-content">
+                    <p>Welcome to the Solar System Explorer! Click on any of the hotspots on the image to learn about the celestial bodies in our solar system.</p>
+                    <p>Our solar system consists of the Sun, eight planets, five dwarf planets, and numerous moons, asteroids, and comets.</p>
+                    
+                    <div class="info-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Age:</span>
+                            <span class="detail-value">4.6 billion years</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Diameter:</span>
+                            <span class="detail-value">287.46 billion km</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Number of planets:</span>
+                            <span class="detail-value">8</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Distance to galactic center:</span>
+                            <span class="detail-value">27,000 light years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="instructions">Click on any highlighted celestial body to learn more about it</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const planetInfo = {
+                sun: {
+                    icon: "☀️",
+                    title: "The Sun",
+                    description: "The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as visible light and infrared radiation.",
+                    details: [
+                        { label: "Diameter", value: "1,391,000 km" },
+                        { label: "Mass", value: "1.989 × 10^30 kg" },
+                        { label: "Surface Temperature", value: "5,500 °C" },
+                        { label: "Age", value: "4.6 billion years" }
+                    ]
+                },
+                mercury: {
+                    icon: "🪐",
+                    title: "Mercury",
+                    description: "Mercury is the smallest and innermost planet in the Solar System. It completes an orbit around the Sun every 88 days and has no natural satellites.",
+                    details: [
+                        { label: "Diameter", value: "4,879 km" },
+                        { label: "Mass", value: "3.3011 × 10^23 kg" },
+                        { label: "Orbital Period", value: "88 days" },
+                        { label: "Distance from Sun", value: "57.9 million km" }
+                    ]
+                },
+                venus: {
+                    icon: "🪐",
+                    title: "Venus",
+                    description: "Venus is the second planet from the Sun. It is similar to Earth in size and mass and often called Earth's sister planet. Venus has a thick atmosphere that traps heat, making it the hottest planet in our solar system.",
+                    details: [
+                        { label: "Diameter", value: "12,104 km" },
+                        { label: "Mass", value: "4.8675 × 10^24 kg" },
+                        { label: "Orbital Period", value: "225 days" },
+                        { label: "Surface Temperature", value: "462 °C" }
+                    ]
+                },
+                earth: {
+                    icon: "🌍",
+                    title: "Earth",
+                    description: "Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 71% of Earth's surface is water, and the remaining 29% is land consisting of continents and islands.",
+                    details: [
+                        { label: "Diameter", value: "12,742 km" },
+                        { label: "Mass", value: "5.97237 × 10^24 kg" },
+                        { label: "Orbital Period", value: "365.25 days" },
+                        { label: "Natural Satellites", value: "1 (Moon)" }
+                    ]
+                },
+                mars: {
+                    icon: "🔴",
+                    title: "Mars",
+                    description: "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System. It is often referred to as the Red Planet due to its reddish appearance caused by iron oxide on its surface.",
+                    details: [
+                        { label: "Diameter", value: "6,779 km" },
+                        { label: "Mass", value: "6.4171 × 10^23 kg" },
+                        { label: "Orbital Period", value: "687 days" },
+                        { label: "Natural Satellites", value: "2 (Phobos, Deimos)" }
+                    ]
+                },
+                jupiter: {
+                    icon: "🪐",
+                    title: "Jupiter",
+                    description: "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined.",
+                    details: [
+                        { label: "Diameter", value: "139,820 km" },
+                        { label: "Mass", value: "1.8982 × 10^27 kg" },
+                        { label: "Orbital Period", value: "12 years" },
+                        { label: "Natural Satellites", value: "79 known" }
+                    ]
+                },
+                saturn: {
+                    icon: "🪐",
+                    title: "Saturn",
+                    description: "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius about nine times that of Earth. It is best known for its spectacular ring system.",
+                    details: [
+                        { label: "Diameter", value: "116,460 km" },
+                        { label: "Mass", value: "5.6834 × 10^26 kg" },
+                        { label: "Orbital Period", value: "29.5 years" },
+                        { label: "Natural Satellites", value: "82 known" }
+                    ]
+                }
+            };
+            const hotspots = document.querySelectorAll('.hotspot, area');
+            hotspots.forEach(hotspot => {
+                hotspot.addEventListener('click', function() {
+                    const planet = this.getAttribute('data-planet');
+                    showPlanetInfo(planet);
+                });
+            });
+            function showPlanetInfo(planet) {
+                const info = planetInfo[planet];
+                if (!info) return;
+                
+                const infoPanel = document.querySelector('.info-panel');
+                infoPanel.innerHTML = `
+                    <div class="info-header">
+                        <div class="planet-icon">${info.icon}</div>
+                        <h2 class="info-title">${info.title}</h2>
+                    </div>
+                    
+                    <div class="info-content">
+                        <p>${info.description}</p>
+                        
+                        <div class="info-details">
+                            ${info.details.map(detail => `
+                                <div class="detail-item">
+                                    <span class="detail-label">${detail.label}:</span>
+                                    <span class="detail-value">${detail.value}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
