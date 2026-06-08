@@ -1,0 +1,268 @@
+body{
+    font-family:Arial;
+    background: #efefef;
+}
+
+.hero{
+    height:100vh;
+    position:relative;
+}
+.nav-item1{
+    background: #bc891c;
+    border-radius: 10px;
+    padding: 1px 44px;
+}
+
+.hero-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:rgb(190, 189, 189);
+    top:50%;
+    transform:translateY(-50%);
+    
+}
+.hero-title{
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size:70px;
+    font-weight:900;
+    text-transform:uppercase;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.hero-title:hover{
+    color:#65cdd9;
+    letter-spacing:8px;
+}
+
+.hero-subtitle{
+    font-size:28px;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+.hero-subtitle:hover{
+    color:#00e5ff;
+    letter-spacing:3px;
+}
+.trainer-card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+.trainer-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    object-position:top;
+}
+
+.dashboard-card:hover,
+.plan-card:hover,
+.trainer-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.premium{
+    border:3px solid orange;
+}
+
+.trainer-card img{
+
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+
+    width:100%;
+    border-radius:10px;
+}
+/* DASHBOARD SECTION */
+
+.dashboard-card{
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    color:rgb(103, 21, 21);
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-15px) scale(1.05);
+}
+
+.dashboard-card h3{
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.dashboard-card p{
+    font-size:18px;
+    margin:0;
+}
+
+.members{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.active{
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+.trainers{
+    background:linear-gradient(135deg,#f7971e,#ffd200);
+}
+
+.revenue{
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+/* MEMBERSHIP PLANS */
+
+.plan-card{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    position:relative;
+    overflow:hidden;
+    height:100%;
+}
+
+.plan-card:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.plan-card h3{
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.plan-card h1{
+    font-size:55px;
+    font-weight:bold;
+    color:#ff6b00;
+    margin-bottom:20px;
+}
+
+.plan-card p{
+    font-size:18px;
+    color:#555;
+}
+
+.plan-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(to right,#ff6b00,#ffcc00);
+}
+
+/* PREMIUM PLAN */
+
+.premium{
+    background:linear-gradient(135deg,#1e1e1e,#2b2b2b);
+    color:white;
+    border:3px solid #ffcc00;
+    transform:scale(1.05);
+}
+
+.premium h1{
+    color:#ffcc00;
+}
+
+.premium p{
+    color:#f0f0f0;
+}
+
+.premium::after{
+    content:"MOST POPULAR";
+    position:absolute;
+    top:15px;
+    right:-35px;
+    background:#ffcc00;
+    color:black;
+    font-size:12px;
+    font-weight:bold;
+    padding:8px 40px;
+    transform:rotate(45deg);
+}
+.gym-logo{
+    font-size:42px;
+    font-weight:bold;
+    background:linear-gradient(
+        30deg,
+        #ff6600,
+        #ff0000,
+        #ffcc00,
+        green,
+        rgb(104, 104, 255),
+        purple
+    );
+
+    background-size:300%;
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientMove 10s linear infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:200%;
+    }
+}
+#feedback { background:#0b1220; color:#fff; padding:48px 12px; border-top:3px solid rgba(255,75,43,0.06); }
+      #feedback .feedback-grid{ display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+      #feedback .feedback-form{ flex:1 1 320px; max-width:520px; background:rgba(255,255,255,0.03); padding:18px; border-radius:10px; }
+      #feedback .feedback-form input, #feedback .feedback-form textarea, #feedback .feedback-form select{
+        width:100%; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#fff;
+      }
+      .stars { display:inline-flex; gap:6px; margin:8px 0 12px; }
+      .star { font-size:24px; cursor:pointer; opacity:0.45; transition:transform .12s, opacity .12s; }
+      .star.selected, .star.hover { opacity:1; transform:translateY(-3px); color:#ffd166; }
+      #testimonials { flex:1 1 360px; max-width:720px; display:grid; gap:12px; }
+      .testimonial { background:rgba(255,255,255,0.03); padding:12px; border-radius:8px; transition:transform .28s, opacity .28s; opacity:0; transform:translateY(10px); }
+      .testimonial.show { opacity:1; transform:translateY(0); }
+      .toast-feedback { position:fixed; right:20px; bottom:20px; background:#28a745; color:#fff; padding:10px 14px; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.3); z-index:9999; }
+      @media (max-width:800px){ #feedback .feedback-grid{flex-direction:column;} }

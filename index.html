@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITZONE Gym Management System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div class="container">
+            <a class="navbar-brand gym-logo" href="#">
+                💪 FITZONE GYM
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">
+                            Plans
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trainers">
+                            Trainers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item1">
+                        <a class="nav-link btn btn-warning text-dark ms-2"
+                           href="login.html">
+                            Login/Register 
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section id="home" class="hero">
+
+        <video autoplay muted loop class="hero-video">
+
+            <source src="images/gym-video.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1 class="hero-title">
+                Transform Your Body
+            </h1>
+            
+            <p class="hero-subtitle">
+                Stronger Every Day
+            </p>
+
+            <a href="#register"
+                class="btn btn-warning btn-lg">
+
+                Join Now
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <h1 id="members">0</h1>
+                <h4>Members</h4>
+            </div>
+
+            <div class="col-md-4">
+                <h1 id="trainersCount">0</h1>
+                <h4>Trainers</h4>
+            </div>
+
+            <div class="col-md-4">
+                <h1 id="experience">0</h1>
+                <h4>Years Experience</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Dashboard Overview
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <div class="dashboard-card">
+
+                    <h3>500</h3>
+                    <p>Total Members</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="dashboard-card">
+
+                    <h3>420</h3>
+                    <p>Active Members</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="dashboard-card">
+
+                    <h3>20</h3>
+                    <p>Trainers</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="dashboard-card">
+
+                    <h3>₹250000</h3>
+                    <p>Revenue</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="plans" class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Membership Plans
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="plan-card">
+
+                    <h3>Basic</h3>
+
+                    <h1>₹999</h1>
+
+                    <p>Gym Access</p>
+
+                    <p>Locker Facility</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="plan-card premium">
+
+                    <h3>Premium</h3>
+
+                    <h1>₹1999</h1>
+
+                    <p>Trainer Support</p>
+
+                    <p>Diet Plan</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="plan-card">
+
+                    <h3>Elite</h3>
+
+                    <h1>₹2999</h1>
+
+                    <p>Personal Trainer</p>
+
+                    <p>Yoga + Zumba</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="trainers" class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Our Trainers
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="trainer-card">
+
+                    <img src="images/trainer1.jpg">
+
+                    <h3>Jitendra Kharayat</h3>
+
+                    <p>Strength Coach</p>
+
+                    <p>5 Years Experience</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="trainer-card">
+
+                    <img src="images/trainer2.jpg">
+
+                    <h3>Aman Singh</h3>
+
+                    <p>Fitness Trainer</p>
+
+                    <p>6 Years Experience</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="trainer-card">
+
+                    <img src="images/trainer3.jpg">
+
+                    <h3>Anurag Singh</h3>
+
+                    <p>Yoga Expert</p>
+
+                    <p>4 Years Experience</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5 text-center">
+
+        <h2>BMI Calculator</h2>
+
+        <input type="number"
+            id="weight"
+            placeholder="Weight (kg)"
+            class="form-control mb-3">
+
+        <input type="number"
+            id="height"
+            placeholder="Height (cm)"
+            class="form-control mb-3">
+
+        <button
+            onclick="calculateBMI()"
+            class="btn btn-primary">
+
+            Calculate
+
+        </button>
+
+        <h3 id="bmiResult"></h3>
+
+    </section>
+
+    <section id="gallery" class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Gym Gallery
+        </h2>
+
+        <div class="gallery">
+
+            <img src="images/gym1.jpg">
+            <img src="images/gym2.jpg">
+            <img src="images/gym3.jpg">
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Contact Us
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <iframe
+                    src="https://maps.google.com/maps?q=gurgaon&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="300">
+                </iframe>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h4>Email :</h4>
+                <p>velocitygym@gmail.com</p>
+
+                <h4>Phone :</h4>
+                <p>+91 6394xxxx21</p>
+
+                <h4>Social Media :</h4>
+
+                <p>
+                    Facebook |
+                    Instagram |
+                    Twitter
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+</section>
+
+
+<section id="register" class="container py-5">
+
+    <h2 class="text-center mb-5">
+        Member Registration
+    </h2>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <form id="registrationForm">
+
+                <input type="text"
+                    id="name"
+                    class="form-control mb-3"
+                    placeholder="Full Name"
+                    required>
+
+                <input type="number"
+                    id="age"
+                    class="form-control mb-3"
+                    placeholder="Age"
+                    required>
+
+                <select id="gender"
+                    class="form-control mb-3"
+                    required>
+
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+
+                </select>
+
+                <input type="email"
+                    id="email"
+                    class="form-control mb-3"
+                    placeholder="Email"
+                    required>
+
+                <input type="tel"
+                    id="phone"
+                    class="form-control mb-3"
+                    placeholder="Phone Number"
+                    required>
+
+                <select id="plan"
+                    class="form-control mb-3"
+                    required>
+
+                    <option value="">
+                        Select Membership Plan
+                    </option>
+
+                    <option>Basic - ₹999</option>
+                    <option>Premium - ₹1999</option>
+                    <option>Elite - ₹2999</option>
+
+                </select>
+
+                <textarea
+                    id="address"
+                    class="form-control mb-3"
+                    rows="4"
+                    placeholder="Address"
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="btn btn-success w-100">
+
+                    Register Now
+
+                </button>
+
+                <div id="successMessage"
+                    class="alert alert-success mt-3"
+                    style="display:none;">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- Feedback Section -->
+    <section id="feedback" class="container">
+      <h2 class="text-center mb-4">Member Feedback</h2>
+
+      <div class="feedback-grid">
+        <form id="feedbackForm" class="feedback-form" novalidate>
+          <label>
+            <input type="text" id="fbName" name="name" placeholder="Your name" required>
+          </label>
+          <label style="margin-top:8px;">
+            <input type="email" id="fbEmail" name="email" placeholder="Email (optional)">
+          </label>
+
+          <div style="margin-top:8px;">
+            <div>Rating</div>
+            <div class="stars" id="starGroup" aria-label="Rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <input type="hidden" id="fbRating" name="rating" value="5">
+          </div>
+
+          <label style="margin-top:8px;">
+            <textarea id="fbMessage" name="message" rows="4" placeholder="Share your experience..." required></textarea>
+          </label>
+
+          <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:10px;">
+            <button type="reset" class="btn btn-outline-light">Reset</button>
+            <button type="submit" class="btn btn-warning">Submit Feedback</button>
+          </div>
+        </form>
+
+        <div id="testimonials" aria-live="polite">
+          <!-- existing testimonials will be rendered here by JS -->
+        </div>
+      </div>
+    </section>
+
+<!-- REGISTRATION FORM END -->
+
+<section id="contact" class="container py-5">
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
